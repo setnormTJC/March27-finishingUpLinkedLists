@@ -33,18 +33,35 @@ auto getOtherMasks()
 
 int main()
 {
-	auto masksOfCoteDIvoire = getMasksOfCoteDIvoire();
-	std::cout << "Some masks from Cote d'Ivoire\n";
-	masksOfCoteDIvoire.printList();
+	/*demoing reversePrint (a recursive function)*/
+	SinglyLinkedList sll("Alice");
+	sll.insertAtFront("Bob");
+	sll.insertAtFront("Carol");
+	
+	//find the address of head node for passing to reversePrint: 
+	auto headLocation = sll.find("Carol"); 
+
+	sll.reversePrint(headLocation); 
+
+	std::cin.get(); //pause execution (preventing code below from executing) 
 
 
-	std::cout << "Some \"other\" masks:\n";
-	auto otherMasks = getOtherMasks();
-	otherMasks.printList();
 
-	//Merge the two: 
-	masksOfCoteDIvoire.merge(otherMasks); 
-	masksOfCoteDIvoire.printList();
+	//auto masksOfCoteDIvoire = getMasksOfCoteDIvoire();
+	//std::cout << "Some masks from Cote d'Ivoire\n";
+	//masksOfCoteDIvoire.printList();
+
+
+	//std::cout << "Some \"other\" masks:\n";
+	//auto otherMasks = getOtherMasks();
+	//otherMasks.printList();
+
+	////Merge the two: 
+	//masksOfCoteDIvoire.merge(otherMasks); 
+	//masksOfCoteDIvoire.printList();
+
+
+	
 
 	//std::forward_list<int> nums; 
 	//nums.

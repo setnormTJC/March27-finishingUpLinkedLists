@@ -45,6 +45,14 @@ void SinglyLinkedList::merge(const SinglyLinkedList& otherList)
 	tempHead->pNext = otherList.pHead;
 }
 
+void SinglyLinkedList::reversePrint(RawPointerNode* pCurrent)
+{
+	if (pCurrent != nullptr)
+	{
+		reversePrint(pCurrent->pNext); //NOTE the lack of "return" (return type is void) 
+		std::cout << pCurrent->data << "\n";
+	}
+}
 
 
 void SinglyLinkedList::clear()
